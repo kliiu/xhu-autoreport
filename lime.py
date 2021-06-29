@@ -26,7 +26,7 @@ class Student(object):
         self.password=password
         self.email=email
     def sendMail(self,content):
-        yag = yagmail.SMTP("klliiuuu@126.com", "AXZJLNDKYDMDMYYO", 'smtp.126.com')
+        yag = yagmail.SMTP("发件邮箱", "授权码", 'smtp.126.com')
         yag.send(self.email, "打卡提醒", content)
     
     
@@ -144,6 +144,7 @@ class Student(object):
             
             #sleep(1)
             driver.find_element_by_css_selector('button').click()#去填报
+            #当无法自动获取定位时可打开位置选择
             #sleep(18)
             #选择省
             #ActionChains(driver).move_to_element(driver.find_element_by_xpath(".//*[@id='app']/div/div[5]/div/div[2]/div[1]/ul/li[24]")).click().perform() # 鼠标左键点击， 1920为x坐标， 1030为y坐标
@@ -189,11 +190,8 @@ class Student(object):
 if __name__ == "__main__":#__name__ 是当前模块名，当模块被直接运行时模块名为 __main__ 。当模块被直接运行时，以下代码块将被运行，当模块是被导入时，代码块不被运行。
 
     # 请输入(学号 ，姓名，密码, 邮箱)
-    student1=Student('3120190971401','李子涵','Lz123456789','782993095@qq.com')
-    student2=Student("3120190971095",'崔晓焜','qdcxk1059582440','1059582440@qq.com')
-    student3=Student("3120190171013", '宋雨芯',"qnyf15082242978sjl",'1481163893@qq.com')
-    student4=Student('3120190806522','肖宇','2301832826xy^','2301832826@qq.com')
-    students=[student4]
+    student1=Student('学号','姓名','密码','接收通知的邮箱')
+    students=[student1]
 
     for student in students:
         a=1
@@ -206,6 +204,5 @@ if __name__ == "__main__":#__name__ 是当前模块名，当模块被直接运�
                 
 
 
-    sleep(1000)
-   
+    
     
