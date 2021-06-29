@@ -63,9 +63,11 @@ class Student(object):
         # results = client.general(image)["words_result"]  # 还可以使用身份证驾驶证模板，直接得到字典对应所需字段
         """ 调用通用文字识别（高精度版） """
         # {'log_id': 4411569300744191453, 'words_result_num': 1, 'words_result': [{'words': ' Y7Y.: 4'}]}
-        APP_ID = '432eea28dc344f08bbe51c564ffc4f80'
-        API_KEY = 'be81524557e145f8b3bfdb6598ac894b'
-        SECRET_KEY = '8cab6b5f4fe44128b272f28cd5a8c2aa'
+        
+        #注册后并领取额度获取
+        APP_ID = 'xxxx'
+        API_KEY = 'xxxxx'
+        SECRET_KEY = 'xxx'
         client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
         results = client.basicAccurate(image)
 
