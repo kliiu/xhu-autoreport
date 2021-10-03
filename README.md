@@ -1,6 +1,6 @@
 # 西华大学xhu-青柠疫服自动打卡（仅供学习）
-采用Python+Selenium实现页面填报
+采用**Python+Selenium**实现页面填报->调用**百度云api**实现验证码识别->**yagmail**模块实现自动邮件提醒
 
-调用百度云api实现验证码识别
-
-yagmail模块实现自动邮件提醒
+## To Start
+①pip install -r requirements.txt
+②run lime.py 学号 姓名 密码 邮箱（仅用于接收提醒）
