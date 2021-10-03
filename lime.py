@@ -18,6 +18,7 @@ from PIL import Image
 from selenium.webdriver.support.ui import Select
 import selenium.webdriver.support.ui as ui
 import threading
+import sys
 
 class Student(object):
     def __init__(self,id,name,password,email):
@@ -192,7 +193,13 @@ class Student(object):
 if __name__ == "__main__":#__name__ 是当前模块名，当模块被直接运行时模块名为 __main__ 。当模块被直接运行时，以下代码块将被运行，当模块是被导入时，代码块不被运行。
 
     # 请输入(学号 ，姓名，密码, 邮箱)
-    student1=Student('学号','姓名','密码','接收通知的邮箱')
+    print( '请输入 学号,姓名,密码,邮箱 ,以空格隔开')
+
+    if(len(sys.argv)<4):
+        print("信息不完整")
+        sys.exit()
+
+    student1=[sys.argv[0],sys.argv[1],sys.argv[2],sys.argv[3]]
     students=[student1]
 
     for student in students:
