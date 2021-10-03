@@ -3,5 +3,6 @@
 
 ## To Start
 pip install -r requirements.txt
+
 run lime.py 学号 姓名 密码 邮箱  (example:run lime.py 3120190000000 张三 ***** zs@mail.com)
 注：邮箱用于接收提醒
