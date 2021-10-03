@@ -1,0 +1,5 @@
+selenium
+yagmail
+datetime
+pillow
+baidu-aip
