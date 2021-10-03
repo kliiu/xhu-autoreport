@@ -1,4 +1,4 @@
-# xhu-college 青柠疫服自动打卡（仅供学习）
+# xhu青柠疫服自动打卡（仅供学习）
 采用**Python+Selenium**实现页面填报->调用**百度云api**实现验证码识别->**yagmail**模块实现自动邮件提醒
 
 ## To Start
